@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Do all of your work inside the document.addEventListener  
 
   // Part 1
-
+const myTitle = document.querySelector('#main-title');
+myTitle.innerHTML = '<h1>DOM NEVA KNOCKED ON NO ONE</h1>'
 
   // Part 2
 
