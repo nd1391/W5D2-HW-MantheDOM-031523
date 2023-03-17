@@ -18,28 +18,55 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Part 1
 const myTitle = document.querySelector('#main-title');
-myTitle.innerHTML = '<h1>DOM NEVA KNOCKED ON NO ONE</h1>'
+myTitle.innerHTML = '<h1>NEVA KNOCKED</h1>'
 
   // Part 2
+const bodyEl = document.querySelector('body')
+bodyEl.style.backgroundColor = 'teal';
 
 
   // Part 3
-
+const favThings = document.querySelector('#favorite-things')
+favThings.removeChild(favThings.lastElementChild);
 
   // Part 4
-
+// const specTitles = document.querySelectorAll(".special-title")
+// for (titles of specTitles) {
+//   specTitles.style.fontsize = '2rem';
+// }
 
   // Part 5
+const pastRaces = document.getElementById("past-races")
+var chiTown = pastRaces.children[3];
+pastRaces.removeChild(chiTown);
 
 
   // Part 6
-
+const newLi = document.createElement('li');
+newLi.textContent = 'Nu Yawk'
+pastRaces.appendChild(newLi);
 
   // Part 7
+const newBlogPost = document.createElement('div');
+newBlogPost.classList.add('blog-post')
 
+const newHeading = document.createElement('h1')
+newHeading.textContent = "Nuw Yawk"
+
+const newP = document.createElement('p');
+newP.textContent = "Nuw Yawk! Da Windy City eh?!"
+
+newBlogPost.appendChild(newHeading);
+newBlogPost.appendChild(newP);
+
+var blogPostsSection = document.getElementById("dom-adventures");
+blogPostsSection.appendChild(newBlogPost);
 
   // Part 8
 
+  // const randomQuote = function() {
+  //   document.querySelector('#quote-of-the-day').innerText = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
+  // };
 
   // Part 9
 
