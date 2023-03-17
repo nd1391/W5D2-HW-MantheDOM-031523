@@ -30,10 +30,10 @@ const favThings = document.querySelector('#favorite-things')
 favThings.removeChild(favThings.lastElementChild);
 
   // Part 4
-// const specTitles = document.querySelectorAll(".special-title")
-// for (titles of specTitles) {
-//   specTitles.style.fontsize = '2rem';
-// }
+const specTitles = document.querySelectorAll(".special-title")
+for (const titles of specTitles) {
+  titles.style.fontSize = '2rem';
+}
 
   // Part 5
 const pastRaces = document.getElementById("past-races")
@@ -54,23 +54,40 @@ const newHeading = document.createElement('h1')
 newHeading.textContent = "Nuw Yawk"
 
 const newP = document.createElement('p');
-newP.textContent = "Nuw Yawk! Da Windy City eh?!"
+newP.textContent = "Took a bite outta dat Big Apple!"
 
 newBlogPost.appendChild(newHeading);
 newBlogPost.appendChild(newP);
 
-var blogPostsSection = document.getElementById("dom-adventures");
+var blogPostsSection = document.querySelector(".main");
 blogPostsSection.appendChild(newBlogPost);
+
+// const blogSection = document.querySelector('.blog-post purple')
+// blogSection.insertBefore(newBlogPost, null);
+
+// newBlogPost.insertBefore()
 
   // Part 8
 
-  // const randomQuote = function() {
-  //   document.querySelector('#quote-of-the-day').innerText = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
-  // };
+const quote = document.querySelector('#quote-title')
+
+quote.addEventListener('click', randomQuote)
+  
+
 
   // Part 9
 
+  const blogPosts = document.querySelectorAll('.blog-post');
 
+  blogPosts.forEach(post => {
+    post.addEventListener('mouseout', () => {
+      post.classList.toggle('purple');
+    });
+  
+    post.addEventListener('mouseenter', () => {
+      post.classList.toggle('red');
+    });
+  });
 
 
 });
